@@ -1,0 +1,34 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+QUERY=$(cat <<EOF
+select
+  6,
+  img_name
+from
+  image i
+  left join page p on i.img_name = p.page_title
+where
+  img_media_type = 'DRAWING'
+  and img_major_mime = 'image'
+  and img_minor_mime = 'svg+xml'
+  and page_namespace = 6
+  and page_is_redirect = 0
+  and not exists (
+    select
+      1
+    from
+      templatelinks tl
+    where
+      p.page_id = tl.tl_from
+      and tl_namespace = 10
+      and tl_title in ('Valid_SVG', 'Invalid_SVG')
+  )
+EOF
+)
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/svg_validator.py \
+    -always \
+    -mysqlquery:"$QUERY"

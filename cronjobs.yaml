@@ -1,0 +1,127 @@
+- name: bsicons-replacer
+  command: $HOME/repos/jobs/bsicons-replacer
+  emails: onfailure
+  image: tf-python39
+  mem: 1Gi
+  no-filelog: true
+  schedule: '7 7 * * *'
+- name: bsicons-reporter
+  command: $HOME/repos/jobs/bsicons-reporter
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '12 12 * * *'
+- name: cat-dbl-redir-fixer
+  command: $HOME/repos/jobs/cat-dbl-redir-fixer
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '6 6 * * 6'
+- name: cfdw
+  command: $HOME/repos/jobs/cfdw
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '17,47 * * * *'
+- name: cfdwl
+  command: $HOME/repos/jobs/cfdwl
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '37 */3 * * *'
+- name: commons-potd-importer
+  command: $HOME/repos/jobs/commons-potd-importer
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '7 0 * * *'
+- name: dfy-daily
+  command: $HOME/repos/jobs/dfy-daily
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '17 1 * * *'
+- name: dfy-monthly
+  command: $HOME/repos/jobs/dfy-monthly
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '37 1 1 * *'
+- name: dfy-tagger
+  command: $HOME/repos/jobs/dfy-tagger
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '*/5 * * * *'
+- name: dfy-untagger
+  command: $HOME/repos/jobs/dfy-untagger
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '57 23 * * *'
+- name: dfy-weekly
+  command: $HOME/repos/jobs/dfy-weekly
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '27 1 * * 0'
+- name: inactive-admins
+  command: $HOME/repos/jobs/inactive-admins
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '0 0 * * *'
+- name: inactive-interface-admins
+  command: $HOME/repos/jobs/inactive-interface-admins
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '18 23 28 * *'
+- name: infotalk-editnotice
+  command: $HOME/repos/jobs/infotalk-editnotice
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '7 19 * * *'
+- name: massmessage-list-updater
+  command: $HOME/repos/jobs/massmessage-list-updater
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '0 0 * * *'
+- name: mlr-daily
+  command: $HOME/repos/jobs/mlr-daily
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '16 16 * * *'
+- name: purge-daily
+  command: $HOME/repos/jobs/purge-daily
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '0 1 * * *'
+- name: purge-dup-args
+  command: $HOME/repos/jobs/purge-dup-args
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '33 * * * *'
+- name: purge-script-errors-ns0
+  command: $HOME/repos/jobs/purge-script-errors-ns0
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '4 * * * *'
+- name: svg-validator-daily
+  command: $HOME/repos/jobs/svg-validator-daily
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '2 2 * * *'
+- name: svg-validator-monthly
+  command: $HOME/repos/jobs/svg-validator-monthly
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+  schedule: '3 3 28 * *'
