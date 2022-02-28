@@ -21,12 +21,12 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.1.12
+    rev: v1.1.13
     hooks:
       - id: remove-crlf
       - id: remove-tabs
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.5
+    rev: 2.1.6
     hooks:
       - id: script-must-not-have-extension
   - repo: https://github.com/lovesegfault/beautysh
