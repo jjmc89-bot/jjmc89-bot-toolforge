@@ -1,0 +1,28 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+QUERY=$(cat <<EOF
+select
+  log_namespace,
+  log_title
+from
+  logging_logindex
+where
+  log_namespace = 6
+  and log_title rlike '(?i)\.svg$'
+  and log_timestamp like '$(date -ud yesterday +'%Y%m%d')%'
+  and (
+    log_type = 'upload'
+    or (
+      log_type = 'delete'
+      and log_action = 'restore'
+    )
+  )
+EOF
+)
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/svg_validator.py \
+    -always \
+    -mysqlquery:"$QUERY"

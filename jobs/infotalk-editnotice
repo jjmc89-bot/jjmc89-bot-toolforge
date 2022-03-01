@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/editnotice_deployer.py \
+    -dir:"$HOME"/.pywikibot2 \
+    -cat:'Wikipedia information pages' \
+    -ns:4,12 \
+    -to_talk \
+    -talk_only \
+    -editnotice_template:'Wikipedia information pages talk page editnotice' \
+    -always
