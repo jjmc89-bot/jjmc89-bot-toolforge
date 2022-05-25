@@ -1,0 +1,12 @@
+[submodule "bsiconsbot"]
+	path = bsiconsbot
+	url = git@github.com:jjmc89-bot/bsiconsbot
+	branch = main
+[submodule "jjmc89-bot-scripts"]
+        path = jjmc89-bot-scripts
+        url = git@github.com:jjmc89-bot/jjmc89-bot-scripts
+        branch = main
+[submodule "pywikibot"]
+	path = pywikibot
+	url = git@github.com:wikimedia/pywikibot
+	branch = stable
