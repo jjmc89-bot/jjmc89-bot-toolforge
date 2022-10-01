@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/pwb/bin/activate
+
+python3 "$HOME"/repos/pywikibot/scripts/template.py \
+    -dir:"$HOME"/.pywikibot-dfy-tagger \
+    -ns:0 \
+    'drafts moved from mainspace' \
+    -remove \
+    -summary:'Remove {{drafts moved from mainspace}}' \
+    -always
