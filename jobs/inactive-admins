@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/inactive_admins.py \
+    -config_title:'User:JJMC89 bot/config/InactiveAdmins'

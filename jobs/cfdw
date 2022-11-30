@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/cfdw.py \
+    -dir:"$HOME"/.pywikibot-cfdw \
+    -page:WP:Categories_for_discussion/Working

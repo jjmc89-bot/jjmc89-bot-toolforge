@@ -1,0 +1,95 @@
+- &defaults
+  name: dummy-defaults-job
+  command: echo this is a dummy job to set defaults
+  emails: onfailure
+  image: tf-python39
+  no-filelog: true
+- name: bsicons-replacer
+  command: $HOME/repos/jobs/bsicons-replacer
+  mem: 1Gi
+  schedule: '7 7 * * *'
+  <<: *defaults
+- name: bsicons-reporter
+  command: $HOME/repos/jobs/bsicons-reporter
+  schedule: '12 12 * * *'
+  <<: *defaults
+- name: cat-dbl-redir-fixer
+  command: $HOME/repos/jobs/cat-dbl-redir-fixer
+  schedule: '6 6 * * 6'
+  <<: *defaults
+- name: cfdw
+  command: $HOME/repos/jobs/cfdw
+  schedule: '17,47 * * * *'
+  <<: *defaults
+- name: cfdwl
+  command: $HOME/repos/jobs/cfdwl
+  schedule: '37 */3 * * *'
+  <<: *defaults
+- name: commons-potd-importer
+  command: $HOME/repos/jobs/commons-potd-importer
+  schedule: '7 0 * * *'
+  <<: *defaults
+- name: dfy-daily
+  command: $HOME/repos/jobs/dfy-daily
+  schedule: '17 1 * * *'
+  <<: *defaults
+- name: dfy-monthly
+  command: $HOME/repos/jobs/dfy-monthly
+  schedule: '37 1 1 * *'
+  <<: *defaults
+- name: dfy-tagger
+  command: $HOME/repos/jobs/dfy-tagger
+  schedule: '*/5 * * * *'
+  <<: *defaults
+- name: dfy-untagger
+  command: $HOME/repos/jobs/dfy-untagger
+  schedule: '57 23 * * *'
+  <<: *defaults
+- name: dfy-weekly
+  command: $HOME/repos/jobs/dfy-weekly
+  schedule: '27 1 * * 0'
+  <<: *defaults
+- name: inactive-admins
+  command: $HOME/repos/jobs/inactive-admins
+  schedule: '0 0 * * *'
+  <<: *defaults
+- name: inactive-interface-admins
+  command: $HOME/repos/jobs/inactive-interface-admins
+  schedule: '18 23 28 * *'
+  <<: *defaults
+- name: infotalk-editnotice
+  command: $HOME/repos/jobs/infotalk-editnotice
+  schedule: '7 19 * * *'
+  <<: *defaults
+- name: massmessage-list-updater
+  command: $HOME/repos/jobs/massmessage-list-updater
+  schedule: '0 0 * * *'
+  <<: *defaults
+- name: mlr-daily
+  command: $HOME/repos/jobs/mlr-daily
+  schedule: '16 16 * * *'
+  <<: *defaults
+- name: purge-daily
+  command: $HOME/repos/jobs/purge-daily
+  schedule: '0 1 * * *'
+  <<: *defaults
+- name: purge-dup-args
+  command: $HOME/repos/jobs/purge-dup-args
+  schedule: '33 * * * *'
+  <<: *defaults
+- name: purge-script-errors-ns0
+  command: $HOME/repos/jobs/purge-script-errors-ns0
+  schedule: '4 * * * *'
+  <<: *defaults
+- name: purge-weekly
+  command: $HOME/repos/jobs/purge-weekly
+  schedule: '27 1 * * 1'
+  <<: *defaults
+- name: svg-validator-daily
+  command: $HOME/repos/jobs/svg-validator-daily
+  schedule: '2 2 * * *'
+  <<: *defaults
+- name: svg-validator-monthly
+  command: $HOME/repos/jobs/svg-validator-monthly
+  schedule: '3 3 28 * *'
+  <<: *defaults
