@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+args=(--always -ns:14 -subcats:Double-redirected_categories)
+
+if [ "$(date +"%u")" -eq 6 ]; then
+    args+=(-transcludes:Category_redirect)
+fi
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/category_double_redirect_fixer.py "${args[@]}"
