@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/multi/purge.py \
+    --forcelinkupdate \
+    -pt:1 \
+    -page:'Wikipedia:Copyright problems' \
+    -page:'Wikipedia:Picture of the day/On the main pages' \
+    -cat:'Stub message templates needing attention' \
+    -cat:'Non-free files with orphaned versions' \
+    -cat:'Pending AfC submissions'
