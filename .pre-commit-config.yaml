@@ -23,7 +23,7 @@ repos:
     hooks:
       - id: script-must-not-have-extension
   - repo: https://github.com/lovesegfault/beautysh
-    rev: v6.2.1
+    rev: v6.4.3
     hooks:
       - id: beautysh
         additional_dependencies:
