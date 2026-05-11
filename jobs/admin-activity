@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+. "$HOME"/repos/.venvs/jjmc89-bot-scripts/bin/activate
+
+day=$(date -u +"%d")
+
+if [ "$day" = "01" ]; then
+    args=(--notify c1n1 --notify c2 --notify c2r)
+elif [ "$day" = "23" ]; then
+    args=(--update-recent --notify c1n2)
+else
+    args=(--update-recent)
+fi
+
+python3 "$HOME"/repos/jjmc89-bot-scripts/enwiki/admin_activity.py -dir:.pywikibot-admin-activity "${args[@]}"
